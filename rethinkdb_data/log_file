@@ -1,0 +1,6 @@
+2013-11-26T13:06:17.986900552 0.012259s info: Creating directory /var/www/rethinkdb/rethinkdb_data
+2013-11-26T13:06:17.987597174 0.012956s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/var/www/rethinkdb/rethinkdb_data' did not already exist.)
+2013-11-26T13:06:17.987828354 0.013187s info: Running rethinkdb 1.10.1-0ubuntu1~precise (GCC 4.6.3)...
+2013-11-26T13:06:17.992902185 0.018261s info: Running on Linux 3.8.0-33-generic x86_64
+2013-11-26T13:06:17.993094410 0.018453s info: Loading data from directory /var/www/rethinkdb/rethinkdb_data
+2013-11-26T13:06:18.079039606 0.104398s error: Could not bind to cluster port: The address at localhost:29015 is reserved or already in use.
