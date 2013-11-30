@@ -1,4 +1,3 @@
 *.log
 rethinkdb_data/*
 vendor/*
-composer.*
