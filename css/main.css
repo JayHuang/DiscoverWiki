@@ -38,7 +38,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   line-height: 2em;
 }
 
-#articles-listing {
+#article-listings {
   max-width: 600px;
   margin: 0 auto;
 }
@@ -58,18 +58,21 @@ button {
 }
 
 .delete-article {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-weight: 700;
+  position: relative;
+  display: block;
+  float: right;
   text-align: center;
-  font-style: normal;
   background-color: #EEE;
   color: #888;
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 0 5px 5px;
   cursor: pointer;
+}
+
+.delete-article:hover {
+  color: red;
 }
 
 span.article-title {
@@ -150,4 +153,24 @@ span.article-title {
 
 .show {
   display: block !important;
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    #article-filter {
+      margin: 0;
+      height: 44px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    #article-filter {
+      margin: 0;
+      height: 44px;
+    }
 }

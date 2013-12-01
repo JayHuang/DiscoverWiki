@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body ng-app="app" ng-controller="apiCtrl" ng-init="fireAPICalls();">
-  <div id="articles-listing">
+  <div id="article-listings">
     <div id="base" class="pure-g-r">
       <input class="pure-u-4-5" type="text" id="article-filter" placeholder="Filter articles" ng-model="search">
       <span class="pure-u-1-5" id="article-count">{{filtered.length}} article(s)</span>
