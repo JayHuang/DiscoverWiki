@@ -1,10 +1,76 @@
-.article-listing {
-  margin: 20px 0;
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
 }
 
-.article-listing span {
-  color: #555;
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #fff;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 2.3125em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s,border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s,border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s,border-color 0.45s ease-in-out;
+}
+
+button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #2ECCFA;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  color: rgba(0,0,0,0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 2.3125em;
+}
+
+.delete-article {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
   background-color: #EEE;
+  color: #888;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+span.article-title {
+  display: inline-block;
+  color: #666;
+  /*background-color: #EEE;*/
+  margin: 0 0 5px 0;
+}
+
+.article-extract {
+  margin: 0;
+  padding: 0;
+}
+
+.article-listing {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 10px;
+  border-left: 1px solid #AAA;
 }
 
 .article-listing.ng-enter {
