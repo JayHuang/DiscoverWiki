@@ -1,3 +1,4 @@
 *.log
 rethinkdb_data/*
 vendor/*
+css/licensed-fonts/*
