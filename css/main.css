@@ -25,6 +25,24 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   transition: box-shadow 0.45s,border-color 0.45s ease-in-out;
 }
 
+#base {
+  margin: 10px 0 0 0;
+}
+
+#article-filter {
+  margin: 0;
+}
+
+#article-count {
+  text-align: center;
+  line-height: 2em;
+}
+
+#articles-listing {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 button {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
@@ -102,4 +120,34 @@ span.article-title {
 
 .article-listing.ng-move-active {
   
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.right {
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
 }
