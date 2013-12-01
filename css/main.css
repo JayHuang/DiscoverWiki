@@ -58,7 +58,6 @@ button {
 }
 
 .delete-article {
-  position: relative;
   display: block;
   float: right;
   text-align: center;
@@ -77,9 +76,13 @@ button {
 
 span.article-title {
   display: inline-block;
-  color: #666;
   /*background-color: #EEE;*/
   margin: 0 0 5px 0;
+}
+
+span.article-title a {
+  color: #666;
+  text-decoration: none;
 }
 
 .article-extract {

@@ -18,8 +18,10 @@
       <span class="pure-u-1-5" id="article-count">{{filtered.length}} article(s)</span>
     </div>
     <div class="article-listing" ng-animate="'animate'" ng-repeat="article in filtered = (wikiArticles | filter:search)">
-      <span class="article-title">{{article.title}}</span><a ng-click="articles.removeArticle($index)" class="delete-article" title="Remove article">&#10006;</a>
-      <!-- <ul>
+      <span class="article-title">
+        <a href="{{article.url}}">{{article.title}}</a>
+      </span><a ng-click="articles.removeArticle($index)" class="delete-article" title="Remove article">&#10006;</a>
+<!--       <ul>
         <li ng-repeat="category in article.categories">{{category.title}}</li>
       </ul> -->
       <div class"article-extract">{{article.extract}}</div>

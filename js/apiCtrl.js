@@ -11,8 +11,7 @@ function apiCtrl($scope, $timeout, $http) {
       },
 
       getURLforArticle : function(pageid) {
-        return $.getJSON('http://en.wikipedia.org/w/api.php?action=query&prop=info&pageids='+pageid+'&inprop=url&format=json&callback=?jsonp_callback', function(url) {
-        });
+        return $http.jsonp('http://en.wikipedia.org/w/api.php?action=query&prop=info&pageids='+pageid+'&inprop=url&format=json&callback=?JSON_CALLBACK', function(url) {});
       }
     }
   })();
@@ -35,10 +34,15 @@ function apiCtrl($scope, $timeout, $http) {
     if($scope.wikiArticles.length < maxArticles) {
       $scope.wikiAPI.getRandomArticle().success(function(data) {
         angular.forEach(data.query.pages, function(page, key) {
-          $scope.wikiArticles.push(page);
-          // $scope.serverAPI.storeArticle(page);
+          $scope.wikiAPI.getURLforArticle(page.pageid).success(function(url){
+            angular.forEach(url.query.pages, function(urlpage, urlkey){
+              page.url = urlpage.fullurl;
+              $scope.wikiArticles.push(page);
+              // $scope.serverAPI.storeArticle(page);
+              $timeout($scope.fireAPICalls, 0);
+            });
+          });
         });
-        $timeout($scope.fireAPICalls, 0);
       });
     }
   }
@@ -51,7 +55,7 @@ function apiCtrl($scope, $timeout, $http) {
       removeArticle : function(index) {
         $scope.wikiArticles.splice(index, 1);
         $scope.fireAPICalls();
-      }   
+      }
     }
   })();
 }  
