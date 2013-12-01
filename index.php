@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/normalize-2.1.3.min.css">
   <link rel="stylesheet" href="css/pure-0.3.0-grids.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body ng-app="app" ng-controller="apiCtrl" ng-init="fireAPICalls();">
   <div id="articles-listing">
