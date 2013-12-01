@@ -1,5 +1,14 @@
-body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+@font-face{
+  font-family:"HelveticaNeue-Light";
+  /* Licensed fonts, added to .gitignore */
+  src:url("licensed-fonts/HelveticaNeue-Light.woff") format("woff");
+}
+
+*,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
   font-size: 14px;
 }
 
@@ -8,7 +17,6 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   -webkit-border-radius: 0;
   border-radius: 0;
   background-color: #fff;
-  font-family: inherit;
   border: 1px solid #ccc;
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
@@ -48,7 +56,6 @@ button {
   -webkit-border-radius: 0;
   border-radius: 0;
   background-color: #2ECCFA;
-  font-family: inherit;
   border: 1px solid #ccc;
   color: rgba(0,0,0,0.75);
   font-size: 0.875em;
