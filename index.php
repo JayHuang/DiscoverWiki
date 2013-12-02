@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/normalize-2.1.3.min.css">
   <link rel="stylesheet" href="css/pure-0.3.0-grids.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529b989f77fb3475"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
