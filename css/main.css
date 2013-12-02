@@ -64,8 +64,13 @@ button {
   height: 2.3125em;
 }
 
-.delete-article {
-  display: block;
+.click-items {
+  float: right;
+  /*font-size: 200%;*/
+}
+
+.click-items > a {
+  display: inline-block;
   float: right;
   text-align: center;
   background-color: #EEE;
@@ -77,8 +82,24 @@ button {
   cursor: pointer;
 }
 
-.delete-article:hover {
+.share-article {
+
+}
+
+.plus-sign {
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  writing-mode: lr-tb;
+}
+
+.clickable:hover {
   color: red;
+}
+
+.delete-article {
+
 }
 
 span.article-title {
@@ -102,6 +123,12 @@ span.article-title a {
   margin: 20px 0;
   padding-left: 10px;
   border-left: 1px solid #AAA;
+}
+
+.social-share {
+  position: absolute;
+  top: -20px;
+  right: 0px;
 }
 
 .article-listing.ng-enter {
@@ -177,19 +204,16 @@ span.article-title a {
     }
 
     .article-listing {
-      position: relative;
       margin: 20px 0 20px 5px;
       padding-left: 5px;
-      border-left: 1px solid #AAA;
     }
 
     #article-count {
       text-align: center;
     }
 
-    .delete-article {
-      margin: 0 5px 5px 5px;
-      cursor: pointer;
+    .click-items {
+      margin: 0 5px 0 0;
     }
 }
 

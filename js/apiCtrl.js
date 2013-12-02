@@ -1,6 +1,25 @@
 var app = angular.module("app", ["ngAnimate"]);
+// app.directive('test-dir', function(){
+//   return {
+//     console.log('TEST WIN!');
+//   }
+// });
 
-function apiCtrl($scope, $timeout, $http) {
+app.directive('articleListing', function() {
+  return {
+    restrict: 'AE',
+    templateUrl: 'templates/article-listing.php'
+  }
+});
+
+app.directive('socialShare', function() {
+  return {
+    restrict: 'AE',
+    templateUrl: 'templates/social-share.php'
+  }
+});
+
+app.controller('apiCtrl', function($scope, $timeout, $http) {
   $scope.wikiArticles = [];
   var maxArticles = 10;
   var isGrabbingArticles = false;
@@ -60,7 +79,14 @@ function apiCtrl($scope, $timeout, $http) {
       removeArticle : function(index) {
         $scope.wikiArticles.splice(index, 1);
         $scope.fireAPICalls();
+      },
+      toggleShare : function(article) {
+        var previousState = article.socialShare;
+        angular.forEach($scope.wikiArticles, function(article) {
+          article.socialShare = false;
+        });
+        article.socialShare = previousState ? false : true;
       }
     }
   })();
-}  
+});
