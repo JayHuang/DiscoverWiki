@@ -82,10 +82,6 @@ button {
   cursor: pointer;
 }
 
-.share-article {
-
-}
-
 .plus-sign {
   display: inline-block;
   -webkit-transform: rotate(45deg);
@@ -127,7 +123,7 @@ span.article-title a {
 
 .social-share {
   position: absolute;
-  top: -20px;
+  top: -38px;
   right: 0px;
 }
 
@@ -214,6 +210,16 @@ span.article-title a {
 
     .click-items {
       margin: 0 5px 0 0;
+    }
+
+    .social-share {
+      right: 3px;
+    }
+
+    .click-items > a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
     }
 }
 
