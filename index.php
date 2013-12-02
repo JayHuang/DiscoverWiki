@@ -2,6 +2,7 @@
 <head>
   <title>Discover Wikipedia!</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
+  <?php include_once("analyticstracking.php") ?>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="angular.js/build/angular.min.js"></script>
   <script src="angular.js/build/angular-resource.min.js"></script>
