@@ -46,13 +46,12 @@ app.directive('addthisToolbox', function() {
             addthis.toolbox($(element).get());
         }
     }
-})
+});
 
- app.directive("ngTap", function() {
+app.directive("ngTap", function() {
   return function($scope, $element, $attributes) {
     var tapped;
     tapped = false;
-    console.log($element);
     $element.bind("click", function() {
       if (!tapped) {
         return $scope.$apply($attributes["ngTap"]);
