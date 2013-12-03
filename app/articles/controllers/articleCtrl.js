@@ -1,25 +1,4 @@
-var app = angular.module("app", ["ngAnimate"]);
-// app.directive('test-dir', function(){
-//   return {
-//     console.log('TEST WIN!');
-//   }
-// });
-
-app.directive('articleListing', function() {
-  return {
-    restrict: 'AE',
-    templateUrl: 'templates/article-listing.php'
-  }
-});
-
-app.directive('socialShare', function() {
-  return {
-    restrict: 'AE',
-    templateUrl: 'templates/social-share.php'
-  }
-});
-
-app.controller('apiCtrl', function($scope, $timeout, $http) {
+angular.module('articleCtrl').controller('articleCtrl', function($scope, $timeout, $http) {
   $scope.wikiArticles = [];
   var maxArticles = 10;
   var isGrabbingArticles = false;
@@ -50,6 +29,25 @@ app.controller('apiCtrl', function($scope, $timeout, $http) {
     }
   })();
 
+  $scope.articlesAPI = (function() {
+    return {
+      shuffleArticles : function() {
+        $scope.wikiArticles.reverse();
+      },
+      removeArticle : function(index) {
+        $scope.wikiArticles.splice(index, 1);
+        $scope.fireAPICalls();
+      },
+      toggleShare : function(currArticle) {
+        var previousState = currArticle.socialShare;
+        angular.forEach($scope.wikiArticles, function(article) {
+          article.socialShare = false;
+        });
+        currArticle.socialShare = previousState ? false : true;
+      }
+    }
+  })();
+
   $scope.fireAPICalls = function() {
     if($scope.wikiArticles.length < maxArticles) {
       if(isGrabbingArticles)
@@ -70,23 +68,4 @@ app.controller('apiCtrl', function($scope, $timeout, $http) {
       });
     }
   }
-
-  $scope.articles = (function() {
-    return {
-      shuffleArticles : function() {
-        $scope.wikiArticles.reverse();
-      },
-      removeArticle : function(index) {
-        $scope.wikiArticles.splice(index, 1);
-        $scope.fireAPICalls();
-      },
-      toggleShare : function(article) {
-        var previousState = article.socialShare;
-        angular.forEach($scope.wikiArticles, function(article) {
-          article.socialShare = false;
-        });
-        article.socialShare = previousState ? false : true;
-      }
-    }
-  })();
 });

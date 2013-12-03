@@ -33,6 +33,42 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   transition: box-shadow 0.45s,border-color 0.45s ease-in-out;
 }
 
+
+/*******************************
+ * STICKY FOOTER - DON'T TOUCH *
+ *******************************/
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -40px;
+}
+
+.push {
+  height: 40px;
+}
+
+footer {
+  height: 40px;
+  color: #777;
+  background-color: #EEE;
+  line-height: 40px;
+  text-align: center;
+}
+
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 #base {
   margin: 10px 0 0 0;
 }
@@ -47,8 +83,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 }
 
 #article-listings {
-  max-width: 600px;
-  margin: 0 auto;
+  
 }
 
 button {
@@ -124,7 +159,7 @@ span.article-title a {
 .social-share {
   position: absolute;
   top: -38px;
-  right: 0px;
+  right: -2px;
 }
 
 .article-listing.ng-enter {
