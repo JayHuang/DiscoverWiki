@@ -15,7 +15,7 @@ var app = angular.module("app", [
   	restrict: 'AE',
     templateUrl: 'app/articles/social-share.tpl.php'
   }
-})
+});
 /**
  * AddThis widget directive
  *
@@ -28,7 +28,7 @@ var app = angular.module("app", [
  *     ...       ^
  *   </div>
  */
-.directive('addthisToolbox', function() {
+app.directive('addthisToolbox', function() {
     return {
         restrict: 'A',
         transclude: true,
@@ -46,4 +46,29 @@ var app = angular.module("app", [
             addthis.toolbox($(element).get());
         }
     }
+})
+
+ app.directive("ngTap", function() {
+  return function($scope, $element, $attributes) {
+    var tapped;
+    tapped = false;
+    console.log($element);
+    $element.bind("click", function() {
+      if (!tapped) {
+        return $scope.$apply($attributes["ngTap"]);
+      }
+    });
+    $element.bind("touchstart", function(event) {
+      return tapped = true;
+    });
+    $element.bind("touchmove", function(event) {
+      tapped = false;
+      return event.stopImmediatePropagation();
+    });
+    return $element.bind("touchend", function() {
+      if (tapped) {
+        return $scope.$apply($attributes["ngTap"]);
+      }
+    });
+  };
 });
