@@ -2,6 +2,16 @@
 
 Site to help bring the wealth of information on Wikipedia to users by abstracting small snippets, making it easier to identify and share interesting content.
 
+DiscoverWiki works on both desktop and mobile via media queries.
+
+**Desktop:**
+
+![Desktop](/screenshots/desktop.png)
+
+**Mobile:**
+
+![Desktop](/screenshots/mobile.png)
+
 ###Setup notes
 
 Be sure to modify the [Google Analytics tracking code](https://github.com/JayHuang/DiscoverWiki/blob/master/app/analyticstracking.php) with your own.
