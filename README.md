@@ -2,6 +2,10 @@
 
 Site to help bring the wealth of information on Wikipedia to users by abstracting small snippets, making it easier to identify and share interesting content.
 
+To ensure there is a diverse selection of articles, 10 snippets are presented to the user at anytime, with new ones appearing when old ones are deleted.
+
+The search bar searches through the current selection of snippets and displays only the ones that match.
+
 DiscoverWiki works on both desktop and mobile via media queries.
 
 **Desktop:**
