@@ -44,7 +44,7 @@ app.directive('addthisToolbox', ['$timeout', function($timeout) {
               // Ajax load (bind events)
               // http://support.addthis.com/customer/portal/articles/381263-addthis-client-api#rendering-js-toolbox
               // http://support.addthis.com/customer/portal/questions/548551-help-on-call-back-using-ajax-i-lose-share-buttons
-              addthis.toolbox($(element), {}, {
+              addthis.toolbox($(element).get(), {}, {
                 title: attrs.title
               });  
             });
