@@ -2,15 +2,15 @@
   <a href="{{article.url}}">{{article.title}}</a>
 </span>
 <div class="click-items">
-  <a ng-tap="articlesAPI.removeArticle($index)" class="delete-article clickable" title="Remove article">
-    <span>&#10006;</span>
-  </a>
-  <a ng-tap="articlesAPI.toggleShare(article)" class="share-article clickable">
-    <span class="plus-sign" title="Share">&#10006;</span>
-    <div social-share ng-show="article.socialShare" class="social-share arrow-down">
-      <!--social-share template here-->
-    </div>
-  </a>
+    <a ng-click="articlesAPI.removeArticle($index)" class="delete-article clickable" title="Remove article">
+        <span>&#10006;</span>
+    </a>
+    <a ng-click="articlesAPI.toggleShare(article)" class="share-article clickable">
+        <span class="plus-sign" title="Share">&#10006;</span>
+        <div social-share ng-show="article.socialShare" class="social-share arrow-down">
+            <!--social-share template here-->
+        </div>
+    </a>
 </div>
 <!--
 <ul>

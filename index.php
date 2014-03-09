@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="app/css/main.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="app/vendor/angular.min.js"></script>
+  <script src="app/vendor/angular-touch.min.js"></script>
   <script src="app/vendor/angular-resource.min.js"></script>
   <script src="app/vendor/angular-animate.min.js"></script>
   <script src="app/app.js"></script>
