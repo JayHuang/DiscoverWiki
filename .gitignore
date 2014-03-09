@@ -1,5 +1,5 @@
 *.log
 rethinkdb_data/
 vendor/
-css/licensed-fonts/
+app/css/licensed-fonts/
 angular.js/
