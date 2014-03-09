@@ -39,4 +39,4 @@ Feel free to extend the project/submit pull requests.
 
 ###Copyright and license
 
-Copyright 2013 Jay Huang under the MIT license.
+Copyright 2013-2014 Jay Huang under the MIT license.
